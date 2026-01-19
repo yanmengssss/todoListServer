@@ -1,6 +1,8 @@
+import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import chatRouter from "./routes/chat";
+import ossRouter from "./routes/oss";
 const app = express();
 app.use(
   cors({
@@ -23,6 +25,8 @@ app.use((_req, res, next) => {
   next();
 });
 app.use("/chat", chatRouter);
+app.use("/oss", ossRouter)
+
 app.listen(5000, () => {
   console.log("Server is running on port 5000");
 });
