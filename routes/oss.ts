@@ -36,16 +36,20 @@ router.get("/code", (req, res) => {
 
         // 5️⃣ 生成 uploadToken（也就是你说的 code）
         const uploadToken = putPolicy.uploadToken(mac);
-
+        console.log(uploadToken)
         // 6️⃣ 返回给前端
         res.json({
-            code: uploadToken,
+            code: 200,
+            data: { token: uploadToken },
+            message: 'success'
         });
     } catch (err) {
         // 7️⃣ 异常处理
         console.error("generate qiniu upload token error:", err);
         res.status(500).json({
+            code:500,
             message: "Failed to generate upload token",
+            data: { token: '' },
         });
     }
 });
