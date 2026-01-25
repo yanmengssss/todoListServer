@@ -3,7 +3,9 @@ import express from "express";
 import cors from "cors";
 import chatRouter from "./routes/chat";
 import ossRouter from "./routes/oss";
+import { startScheduler } from "./scheduler";
 const app = express();
+startScheduler()
 app.use(
   cors({
     origin: "*",
