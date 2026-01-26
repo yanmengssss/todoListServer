@@ -1,7 +1,6 @@
 import redis from "../DB/redis";
 import { MessageTemplate, sendMail, TaskType } from "../utils/email";
 import { prisma } from "../DB/mysql";
-
 export const getUser = (userID: string) => {//user的tipsTime和tipsFrequency单位都是h
     return prisma.user.findUnique({
         where: { userID }
