@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  express-app:
+    build: .
+    container_name: express_server
+    ports:
+      - "7000:5000"
+    restart: always
+    env_file:
+      - .env
+    # 如果你的代码里有连接重试机制，可以加上这个
+    environment:
+      - NODE_ENV=production
