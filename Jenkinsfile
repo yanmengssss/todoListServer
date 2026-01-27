@@ -27,6 +27,7 @@ pipeline {
                 sh """
                 echo "QN_AK=${env.QN_AK}" > .env
                 echo "QN_SK=${env.QN_SK}" >> .env
+                echo "QN_BUCKET_NAME=${env.QN_BUCKET_NAME}" >> .env
                 echo "MYSQL_DATABASE_URL=${env.MYSQL_DATABASE_URL}" >> .env
                 echo "REDIS_DATABASE_URL=${env.REDIS_DATABASE_URL}" >> .env
                 echo "EMAIL=${env.EMAIL}" >> .env
