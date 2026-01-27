@@ -5,6 +5,7 @@ ENV PATH="$PNPM_HOME:$PATH"
 RUN corepack enable
 WORKDIR /app
 
+
 # 2. 安装依赖
 FROM base AS deps
 COPY package.json pnpm-lock.yaml ./
