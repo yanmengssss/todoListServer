@@ -1,11 +1,11 @@
-version: '3.8'
+version: "3.8"
 
 services:
   express-app:
     build: .
-    container_name: express_server
+    container_name: todo_list_server
     ports:
-      - "7000:5000"
+      - "5000:5000"
     restart: always
     env_file:
       - .env

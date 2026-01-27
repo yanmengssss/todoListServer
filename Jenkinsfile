@@ -31,15 +31,15 @@ pipeline {
         stage('Docker Build') {
             steps {
                 // 使用我们之前写好的 Dockerfile 进行打包
-                sh "docker compose build"
+                sh "docker-compose build"
             }
         }
 
         stage('Deploy') {
             steps {
                 // 停止旧容器并启动新容器
-                sh "docker compose down || true"
-                sh "docker compose up -d"
+                sh "docker-compose down || true"
+                sh "docker-compose up -d"
             }
         }
     }
