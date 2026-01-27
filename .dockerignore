@@ -3,5 +3,4 @@ npm-debug.log
 Dockerfile
 .dockerignore
 .git
-.env
 prisma-mysql-client

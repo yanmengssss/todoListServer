@@ -25,6 +25,8 @@ pipeline {
                 echo "EMAIL=${env.EMAIL}" >> .env
                 echo "EMAIL_PASS=${env.EMAIL_PASS}" >> .env
                 """
+
+                sh "ls -la .env"
             }
         }
 
