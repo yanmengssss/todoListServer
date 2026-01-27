@@ -6,7 +6,7 @@ pipeline {
         IMAGE_NAME = "todolist-server"
         QN_AK     = "${params.QN_AK}"
         QN_SK     = "${params.QN_SK}"
-        QN_bucketName = "${params.QN_BUCKET_NAME}"
+        QN_BUCKET_NAME = "${params.QN_BUCKET_NAME}"
         MYSQL_URL = "${params.MYSQL_DATABASE_URL}"
         REDIS_URL = "${params.REDIS_DATABASE_URL}"
         EMAIL     = "${params.EMAIL}"
